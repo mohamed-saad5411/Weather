@@ -1,0 +1,39 @@
+body
+{
+    background-color: rgb(36, 53, 63);
+}
+.logo-weather{
+    cursor: pointer;
+}
+#nav-bar,#search{
+    background-color: #373a49;
+}
+#nav-bar ul li a:hover{
+    color: #009ad8 !important;
+    border: 2px solid #009ad8 ;
+    border-radius: 15px;
+}
+#mainSection{
+    background-image: url(../images/banner.png);
+    height: 50vh;
+    background-size: cover;
+}
+.custom-head1{
+    border-top-left-radius: 7px;
+    background-color: #2d3038 ;
+}
+.degree-custom{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.custom-head2{
+    background-color: #24262c ;
+}
+.mid-part{
+    background-color: #2d3038 ;
+    height: 100%;
+}
+.custom-head3{
+    border-top-right-radius: 7px;
+    background-color: #2d3038 ;
+}
