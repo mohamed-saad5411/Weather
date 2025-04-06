@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <section class="container p-4 bg-dark my-5 rounded-3">
+    <section class="container-lg p-4 bg-dark my-5 rounded-3">
         <div class="bg- row overflow-hidden pt-3 overflow-auto  text-center">
             <div class="col-md-4 ">
                 <div class="d-flex align-items-center bg-">
@@ -25,13 +25,13 @@
                 <input id="srchBtn" type="text" class="form-control rounded-5" placeholder="search city ...">
             </div>
             <div class="col-md-4 ">
-                <button class="btn btn-success w-75 rounded-5">Current Location</button>
+                <button id="locationBtn" class="btn btn-success w-75 rounded-5">Current Location</button>
             </div>
         </div>
 
         <div class="container my-5">
             <div class="row">
-                <div class="col-md-4 col-xl-3 col-lg-4 bg-">
+                <div class="col-md-5 col-xl-3 col-lg-4 bg-">
                     <div class="rounded-3 bg-lightdark text-white p-3 ">
                         <p class="h4">Now</p>
                         <div class=" text-center row align-items-center justify-content-between">
@@ -59,15 +59,16 @@
                     </div>
 
                     <p class="text-white my-2">4 Days Forecast</p>
-                    
+
                     <div class="rounded-3 bg-lightdark text-white p-3 ">
-                        <div class="d-flex bg- align-items-center justify-content-between">
+
+                        <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex bg- py-1 align-items-center justify-content-center">
                                 <img id="fristDayImg" src="img/icon-wind.png" class=" bg- nxt-icon-img" alt="">
                                 <p id="fristDayDegree" class="bg-">7C</p>
                                 <p id="" class="ps-1">°C</p>
                             </div>
-                            <div>
+                            <div class="">
                                 <p id="fristDayDate" class="text-white-50">2march</p>
                             </div>
                             <div>
@@ -116,47 +117,36 @@
                                 <p id="forthDay" class="text-white-50">sunday</p>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
-                <div class="col-md-8 col-xl-9 col-lg-8 all-data bg-">
+
+                <div class="col-md-7 col-xl-9 col-lg-8 all-data bg-">
                     <div class="rounded-3 bg-lightdark text-white p-4 ">
                         <p>Today HighLights</p>
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-6 col-md-12">
-                                    <div class="bg-dark my-3 rounded-2 p-3">
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <p>Air Quality Index</p>
-                                            <button class="btn btn-success btn-sm">Good</button>
-                                        </div>
+                                    <div class="bg-dark my-3 rounded-2 p-4">
                                         <div class="d-flex air-index align-items-center justify-content-around">
-                                            <img src="img/icon-wind.png" alt="">
+                                            <img src="img/icon-umberella.png" alt="">
                                             <div class="text-center">
-                                                <p class="text-white-50">PM25</p>
-                                                <p class="h3">3.90</p>
+                                                <p class="text-white-50">% Rain</p>
+                                                <p id="percentageOfRain" class="h3">3.90</p>
                                             </div>
                                             <div class="text-center">
-                                                <p class="text-white-50">PM25</p>
-                                                <p class="h3">3.90</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <p class="text-white-50">PM25</p>
-                                                <p class="h3">3.90</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <p class="text-white-50">PM25</p>
-                                                <p class="h3">3.90</p>
+                                                <p class="text-white-50">% Snow</p>
+                                                <p id="percentageOfSnow" class="h3">3.90</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-md-12">
-                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                    <div class="bg-dark my-3 rounded-2 p-2">
                                         <div class="d-flex  justify-content-between mb-3">
                                             <p>Sunrise & Sunset</p>
                                         </div>
-                                        <div class="d-flex sun-rise py-1 align-items-center justify-content-around">
+                                        <div class="d-flex sun-rise align-items-center justify-content-around">
                                             <i class="fa-solid fa-2xl fa-sun"></i>
                                             <div class="">
                                                 <p class="text-white-50">Sunrise</p>
@@ -225,6 +215,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <P class="text-white h4 my-3">Today at</P>
+                    <div class="rounded-3 bg-dark text-white">
+                        <div id="dayDataDetails" class="row g-3">
+                            
                         </div>
                     </div>
                 </div>
