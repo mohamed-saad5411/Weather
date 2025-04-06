@@ -3,107 +3,242 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather Application</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <nav id="nav-bar" class="d-flex justify-content-around align-items-center py-4">
-        <div class="d-flex align-items-center justify-content-center logo-weather">
-            <img src="images/logo.png" class="img-fluid" alt="">
-            <div class="ps-3 pt-2 text-white">
-                <h4 class="m-0">Weather</h4>
-                <p>tagline goes here</p>
-            </div>
-        </div>
-        <div>
-            <ul class="list-unstyled d-flex justify-content-between mb-0">
-                <li><a href="#mainSection" class="text-decoration-none px-4 text-white">Home</a></li>
-                <li><a href="" class="text-decoration-none px-4 text-white">News</a></li>
-                <li><a href="" class="text-decoration-none px-4 text-white">Live cameras</a></li>
-                <li><a href="" class="text-decoration-none px-4 text-white">Photos</a></li>
-                <li><a href="" class="text-decoration-none px-4 text-white">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section id="mainSection" class="">
-        <div class="form-grop container">
-            <label for="search"></label>
-            <input type="text" class="form-control py-3 ps-5 mt-5 border-0 rounded-5 text-white" id="search"
-                placeholder="Find your location .....">
-        </div>
-        <div class="container w-75 my-5">
-            <div class="row gx-0">
-                <div class="col-md-4">
-                    <div class="bg-dark rounded-start-3 text-white">
-                        <div class="d-flex custom-head1 justify-content-between p-2 mb-3">
-                            <p id="today" class="mb-0"></p>
-                            <p id="date" class="mb-0"></p>
-                        </div>
-                        <div class="p-3">
-                            <p id="country"></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <p id="degree" class="degree-custom"></p>
-                                <img id="iconImage" src="" class="img-fluid" alt="">
-                            </div>
-                            <p id="clouds" class="text-info"></p>
-                            <div class="d-flex">
-                                <div class="d-flex mx-2 align-items-center">
-                                    <img src="images/icon-umberella.png" class="me-2" alt="">
-                                    <p class="mb-0">20%</p>
-                                </div>
-                                <div class="d-flex mx-2 align-items-center">
-                                    <img src="images/icon-wind.png" class="me-2" alt="">
-                                    <p class="mb-0">18km/hr</p>
-                                </div>
-                                <div class="d-flex mx-2 align-items-center">
-                                    <img src="images/icon-compass.png" class="me-2" alt="">
-                                    <p id="direction" class="mb-0"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mid-part text-white">
-                        <div class="custom-head2 text-center p-2 mb-3">
-                            <p id="tomorrow" class="mb-0"></p>
-                        </div>
-                        <div class="p-3">
-                            <div class="text-center">
-                                <img id="iconImageTomorrow" src="images/113.png" class="img-fluid" alt="">
-                                <p id="tomorrowMaxDegree" class="fs-1 fw-bold"></p>
-                                <p id="tomorrowMinDegree" class=""></p>
-                                <p id="tomorrowClouds" class="text-info"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="bg-dark h-100 rounded-end-3 text-white">
-                        <div class="custom-head3 text-center p-2 mb-3">
-                            <p id="afterTomorrow" class="mb-0"></p>
-                        </div>
-                        <div class="p-3">
-                            <div class="text-center">
-                                <img id="iconImageAfterTomorrow" src="images/113.png" class="img-fluid" alt="">
-                                <p id="afterTomorrowMaxDegree" class="fs-1 fw-bold"></p>
-                                <p id="afterTomorrowMinDegree" class=""></p>
-                                <p id="afterTomorrowClouds" class="text-info"></p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="container p-4 bg-dark my-5 rounded-3">
+        <div class="bg- row overflow-hidden pt-3 overflow-auto  text-center">
+            <div class="col-md-4 ">
+                <div class="d-flex align-items-center bg-">
+                    <img src="img/logo.png" class="me-2" alt="">
+                    <h1 class="text-white h5 m-0">Weather Application</h1>
                 </div>
             </div>
+            <div class="col-md-4 ">
+                <input id="srchBtn" type="text" class="form-control rounded-5" placeholder="search city ...">
+            </div>
+            <div class="col-md-4 ">
+                <button class="btn btn-success w-75 rounded-5">Current Location</button>
+            </div>
         </div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-4 col-xl-3 col-lg-4 bg-">
+                    <div class="rounded-3 bg-lightdark text-white p-3 ">
+                        <p class="h4">Now</p>
+                        <div class=" text-center row align-items-center justify-content-between">
+                            <div class="col-md-4 d-flex">
+                                <p id="currentDegree" class="h1"></p>
+                                <p id="" class="h1 ms-2">°C</p>
+
+                            </div>
+                            <div class="col-md-8"> <img id="currentImg" src="img/143.png" class="icon-img ms-4" alt="">
+                            </div>
+                        </div>
+                        <p class="text-white-50 position-relative mb-3 text-after" id="textCondition">Broken Clouds</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-calendar me-2 text-white"></i>
+                            <p class="text-white-50" id="currentDay">wed</p>
+                            <p class="text-white-50 ms-1" id="currentDate"> 1 </p>
+                            <p class="text-white-50 ms-1" id="currentMonth"> 1 </p>
+
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <p class="text-white-50" id="currentLocation">london</p>
+                        </div>
+
+                    </div>
+
+                    <p class="text-white my-2">4 Days Forecast</p>
+                    
+                    <div class="rounded-3 bg-lightdark text-white p-3 ">
+                        <div class="d-flex bg- align-items-center justify-content-between">
+                            <div class="d-flex bg- py-1 align-items-center justify-content-center">
+                                <img id="fristDayImg" src="img/icon-wind.png" class=" bg- nxt-icon-img" alt="">
+                                <p id="fristDayDegree" class="bg-">7C</p>
+                                <p id="" class="ps-1">°C</p>
+                            </div>
+                            <div>
+                                <p id="fristDayDate" class="text-white-50">2march</p>
+                            </div>
+                            <div>
+                                <p id="fristDay" class="text-white-50">sunday</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex bg- align-items-center justify-content-between">
+                            <div class="d-flex bg- py-1 align-items-center justify-content-center">
+                                <img id="secondDayImg" src="img/icon-wind.png" class=" bg- nxt-icon-img" alt="">
+                                <p id="secondDayDegree" class="bg-">7C</p>
+                                <p id="" class="ps-1">°C</p>
+                            </div>
+                            <div>
+                                <p id="secondDayDate" class="text-white-50">2march</p>
+                            </div>
+                            <div>
+                                <p id="secondDay" class="text-white-50">sunday</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex bg- align-items-center justify-content-between">
+                            <div class="d-flex bg- py-1 align-items-center justify-content-center">
+                                <img id="thirdDayImg" src="img/icon-wind.png" class=" bg- nxt-icon-img" alt="">
+                                <p id="thirdDayDegree" class="bg-">7C</p>
+                                <p id="" class="ps-1">°C</p>
+                            </div>
+                            <div>
+                                <p id="thirdDayDate" class="text-white-50">2march</p>
+                            </div>
+                            <div class="">
+                                <p id="thirdDay" class="text-white-50">sunday</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex bg- align-items-center justify-content-between">
+                            <div class="d-flex bg- py-1 align-items-center justify-content-center">
+                                <img id="forthDayImg" src="img/icon-wind.png" class=" bg- nxt-icon-img" alt="">
+                                <p id="forthDayDegree" class="bg-">7C</p>
+                                <p id="" class="ps-1">°C</p>
+                            </div>
+                            <div>
+                                <p id="forthDayDate" class="text-white-50">2march</p>
+                            </div>
+                            <div class="">
+                                <p id="forthDay" class="text-white-50">sunday</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-8 col-xl-9 col-lg-8 all-data bg-">
+                    <div class="rounded-3 bg-lightdark text-white p-4 ">
+                        <p>Today HighLights</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-12">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <p>Air Quality Index</p>
+                                            <button class="btn btn-success btn-sm">Good</button>
+                                        </div>
+                                        <div class="d-flex air-index align-items-center justify-content-around">
+                                            <img src="img/icon-wind.png" alt="">
+                                            <div class="text-center">
+                                                <p class="text-white-50">PM25</p>
+                                                <p class="h3">3.90</p>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="text-white-50">PM25</p>
+                                                <p class="h3">3.90</p>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="text-white-50">PM25</p>
+                                                <p class="h3">3.90</p>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="text-white-50">PM25</p>
+                                                <p class="h3">3.90</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-12">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="d-flex  justify-content-between mb-3">
+                                            <p>Sunrise & Sunset</p>
+                                        </div>
+                                        <div class="d-flex sun-rise py-1 align-items-center justify-content-around">
+                                            <i class="fa-solid fa-2xl fa-sun"></i>
+                                            <div class="">
+                                                <p class="text-white-50">Sunrise</p>
+                                                <p id="sunriseTime" class="h4">3.90AM</p>
+                                            </div>
+                                            <!-- <img src="img/OIP.jpeg" class="sun-img" alt=""> -->
+                                            <i class="fa-solid fa-2xl fa-moon"></i>
+                                            <div class="">
+                                                <p class="text-white-50">Sunset</p>
+                                                <p id="sunsetTime" class="h4">3.90PM</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="">
+                                            <p class="text-white-50">Humidity</p>
+                                            <div
+                                                class="text-center py-2 d-flex align-items-center justify-content-between">
+                                                <i class="fa-solid fa-2xl fa-droplet"></i>
+                                                <p id="humidity" class="h4">3.90</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="">
+                                            <p class="text-white-50">Pressure</p>
+                                            <div
+                                                class="text-center py-2 d-flex align-items-center justify-content-between">
+                                                <i class="fa-solid fa-xl fa-water"></i>
+                                                <p id="pressure" class="h4">3.90</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="">
+                                            <p class="text-white-50">Visability</p>
+                                            <div
+                                                class="text-center py-2 d-flex align-items-center justify-content-between">
+                                                <i class="fa-solid fa-xl fa-eye"></i>
+                                                <p id="visability" class="h4">3.90</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6">
+                                    <div class="bg-dark my-3 rounded-2 p-3">
+                                        <div class="">
+                                            <p class="text-white-50">Feels Like</p>
+                                            <div
+                                                class="text-center py-2 d-flex align-items-center justify-content-between">
+                                                <i class="fa-solid fa-2xl fa-temperature-three-quarters"></i>
+                                                <p id="feelsLike" class="h4">3.90</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
-    <!-- ....................................................................................... -->
-    <script src="js/index.js"></script>
-    <!-- ....................................................................................... -->
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

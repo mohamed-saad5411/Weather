@@ -1,0 +1,48 @@
+
+@media screen and (max-width: 590px) {
+    #srchBtn{
+        margin: 1rem auto;
+        width: 90%;
+    }
+    .all-data{
+        margin-top: 1rem;
+    }
+    section{
+        width: 93% !important;
+    }
+    .sun-rise ,.air-index{
+        text-align: center;
+        flex-direction: column;
+    }
+    .sun-rise div {
+        margin: 1.5rem auto;
+    }
+    .sun-rise i{
+        margin: 0.7rem auto;
+    }
+    .air-index div{
+        margin: 0.1rem auto;
+    }
+    .air-index img{
+        margin: 1.5rem auto;
+        width: 3rem;
+    }
+    
+}  
+
+@media screen and (max-width: 768px) {
+    .all-data{
+        margin-top: 1rem;
+    }
+    #srchBtn{
+        margin: 1rem auto;
+    }
+    
+}
+@media screen and (max-width: 992px) {
+    section{
+        width: 95% !important;
+    }
+    
+}
+

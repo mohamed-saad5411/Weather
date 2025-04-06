@@ -1,39 +1,43 @@
-body
-{
-    background-color: rgb(36, 53, 63);
+p {
+    margin: 0%;
 }
-.logo-weather{
-    cursor: pointer;
+body{
+    background-color: black;
 }
-#nav-bar,#search{
-    background-color: #373a49;
+.bg-lightdark {
+    background-color: #303336;
+    box-shadow: 1px 1px 7px 1px rgb(32, 32, 32);
 }
-#nav-bar ul li a:hover{
-    color: #009ad8 !important;
-    border: 2px solid #009ad8 ;
-    border-radius: 15px;
+
+.text-after::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #4c4e50;
+    position: absolute;
+    left: 0;
+    top: 130%;
 }
-#mainSection{
-    background-image: url(../images/banner.png);
-    height: 50vh;
-    background-size: cover;
+
+.icon-img {
+    width: 5rem;
+    height: 5rem;
+
 }
-.custom-head1{
-    border-top-left-radius: 7px;
-    background-color: #2d3038 ;
+
+.nxt-icon-img {
+    width: 2rem;
+    height: 2rem;
+
 }
-.degree-custom{
-    font-size: 4rem;
-    font-weight: 700;
-}
-.custom-head2{
-    background-color: #24262c ;
-}
-.mid-part{
-    background-color: #2d3038 ;
-    height: 100%;
-}
-.custom-head3{
-    border-top-right-radius: 7px;
-    background-color: #2d3038 ;
+
+#secondDayDate,
+#secondDay,
+#forthDayDate,
+#forthDay,
+#fristDayDate,
+#fristDay,
+#thirdDayDate,
+#thirdDay {
+    font-size: 0.7rem;
 }
